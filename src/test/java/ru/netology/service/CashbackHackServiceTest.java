@@ -1,24 +1,27 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import org.junit.Test;
+import org.junit.Assert;
+
+import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
     @Test
-    void shouldSuggest100ifPurchase900() {
+    public void shouldSuggest100ifPurchase900() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 900;
         int actual = cashbackHackService.remain(purchase);
         int expected = 100;
 
-        assertEquals(actual, expected);
+        assertEquals(actual, expected); 
+
 
     }
 
     @Test
-    void shouldSuggest500ifPurchase1500() {
+    public void shouldSuggest500ifPurchase1500() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 1500;
@@ -30,7 +33,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void ifPurchase1000() {
+    public void ifPurchase1000() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 1000;
@@ -42,7 +45,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void ifPurchaseNull() {
+    public void ifPurchaseNull() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 0;
@@ -54,7 +57,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldSuggest1ifPurchase999() {
+    public void shouldSuggest1ifPurchase999() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 999;
@@ -67,7 +70,7 @@ public class CashbackHackServiceTest {
 
 
     @Test
-    void shouldSuggest999ifPurchase1001() {
+    public void shouldSuggest999ifPurchase1001() {
 
         CashbackHackService cashbackHackService = new CashbackHackService();
         int purchase = 1001;
